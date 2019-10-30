@@ -1,0 +1,27 @@
+@url=http://localhost:3000/api
+@json=Content-Type: application/json
+
+###
+GET {{url}}/users
+
+### 
+POST {{url}}/register
+{{json}}
+
+{
+    "username": "root2",
+    "password": "root"
+}
+
+### 
+POST {{url}}/login
+{{json}}
+
+{
+    "username": "root2",
+    "password": "root"
+}
+
+###
+GET {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYWVkNDFiYzA0NDNkNDA2Yzk0OTlmNSIsImlhdCI6MTU3MTczOTI4Nn0.Qj_6wVWTUDo67soyRZAB1b8h7VWgwdfo9i1E4A5niGQ
